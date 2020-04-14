@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.g_google_drive">
 
+    <!--允許訪問Account Service-->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!--允许应用程序管理AccountManager中的账户列表。-->
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
