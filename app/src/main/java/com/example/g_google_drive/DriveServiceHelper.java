@@ -209,8 +209,7 @@ public class DriveServiceHelper {
      * @paran uri => intent.getData
      *OpenableColumns:https://developer.android.com/reference/android/provider/OpenableColumns
      * */
-    public Task<Pair<String, String>> openFileUsingStorageAccessFramework(
-            ContentResolver contentResolver, Uri uri) {
+    public Task<Pair<String, String>> openFileUsingStorageAccessFramework(ContentResolver contentResolver, Uri uri) {
         return Tasks.call(mExecutor, () -> {
 
             //1.返回drive文件的顯示名
@@ -240,4 +239,6 @@ public class DriveServiceHelper {
             return Pair.create(name, content);
         });
     }
+
+
 }
